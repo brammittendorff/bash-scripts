@@ -22,7 +22,7 @@ bash connect.sh -s=your wifi -p=wpa password
 
 If you need new iwlist results everytime you scan you can use
 ```
-bash connect.sh --clear | bash connect.sh -i=wlan0 | grep SSID
+bash connect.sh --clear | bash connect.sh -i=wlan0
 ```
 
 To clear the iwlist cache file use the following command
