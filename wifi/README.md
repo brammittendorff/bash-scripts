@@ -15,14 +15,14 @@ To view SSID's
 bash connect.sh -i=wlan0 |grep SSID
 ```
 
-To add a wifi with wpa2 password use the following command
-```
-bash connect.sh -s=your wifi -p=wpa password
-```
-
 If you need new iwlist results everytime you scan you can use
 ```
 bash connect.sh --clear | bash connect.sh -i=wlan0
+```
+
+To add a wifi with wpa2 password to your wpa_supplicant file use the following command
+```
+bash connect.sh -s=your wifi -p=wpa password
 ```
 
 To clear the iwlist cache file use the following command
