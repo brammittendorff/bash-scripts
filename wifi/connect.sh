@@ -15,6 +15,9 @@ case $i in
     -p=*|--password=*)
     PASSWORD=`echo $i | sed 's/[-a-zA-Z0-9]*=//'`
     ;;
+    --clear)
+    CLEAR=true
+    ;;
     *)
 
     ;;
@@ -31,9 +34,12 @@ if [ ! -z $INTERFACE ]; then
 elif [ ! -z $SSID ] || [ ! -z $PASSWORD ]; then
     sudo sh -c "wpa_passphrase $SSID $PASSWORD >> $WPA_SUPPLICANT_FILE"
     echo "Wifi $SSID with password **** written to file $WPA_SUPPLICANT_FILE"
+elif [ ${CLEAR} ]; then
+    rm $IWLIST_FILE
 else
-    echo "Usage:  connect.sh [INTERFACE] [SSID] [PASSWORD]"
+    echo "Usage: connect.sh [INTERFACE] [SSID] [PASSWORD] [CLEAR]"
     echo "  -i, --interface         Interface to scan for wifi"
     echo "  -s, --ssid              The ssid of your wifi"
     echo "  -p, --password          Wpa password"
+    echo "  --clear                 Remove iwlist cache file"
 fi
