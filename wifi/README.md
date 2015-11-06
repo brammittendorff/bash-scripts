@@ -7,20 +7,25 @@ To view WIFI or SSID's you should use iwlist and scan and to much thinking I mad
 
 To view all the details of iwlist
 ```
-sudo /bin/bash connect.sh -i=wlan0
+bash connect.sh -i=wlan0
 ```
 
 To view SSID's
 ```
-sudo /bin/bash connect.sh -i=wlan0 |grep SSID
+bash connect.sh -i=wlan0 |grep SSID
 ```
 
 To add a wifi with wpa2 password use the following command
 ```
-sudo /bin/bash connect.sh -s=your wifi -p=wpa password
+bash connect.sh -s=your wifi -p=wpa password
+```
+
+If you need new iwlist results everytime you scan you can use
+```
+bash connect.sh --clear | bash connect.sh -i=wlan0 | grep SSID
 ```
 
 To clear the iwlist cache file use the following command
 ```
-sudo /bin/bash connect.sh --clear
+bash connect.sh --clear
 ```
