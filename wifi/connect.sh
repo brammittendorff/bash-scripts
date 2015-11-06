@@ -28,6 +28,7 @@ if [ ! -z $INTERFACE ]; then
     if [ ! -f $IWLIST_FILE ]; then
         echo "Scanning $INTERFACE and writing results to $IWLIST_FILE this may take a while..."
         sudo iwlist $INTERFACE scan > $IWLIST_FILE
+        cat $IWLIST_FILE
     else
         cat $IWLIST_FILE
     fi
