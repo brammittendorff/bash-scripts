@@ -15,7 +15,12 @@ To view all the details of iwlist
 sudo /bin/bash connect.sh -i=wlan0
 ```
 
-To add a wifi with wpa2 password use the following code
+To add a wifi with wpa2 password use the following command
 ```
 sudo /bin/bash connect.sh -s=your wifi -p=wpa password
+```
+
+To clear the iwlist cache file use the following command
+```
+sudo /bin/bash connect.sh --clear
 ```
