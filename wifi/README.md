@@ -7,7 +7,7 @@ To view WIFI or SSID's you should use iwlist and scan and to much thinking I mad
 
 To view SSID's
 ```
-sudo /bin/bash connect.sh -i=wlan0 |grep ssid
+sudo /bin/bash connect.sh -i=wlan0 |grep SSID
 ```
 
 To view all the details of iwlist
