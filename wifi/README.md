@@ -5,14 +5,14 @@ To view WIFI or SSID's you should use iwlist and scan and to much thinking I mad
 
 ## Usage
 
-To view SSID's
-```
-sudo /bin/bash connect.sh -i=wlan0 |grep SSID
-```
-
 To view all the details of iwlist
 ```
 sudo /bin/bash connect.sh -i=wlan0
+```
+
+To view SSID's
+```
+sudo /bin/bash connect.sh -i=wlan0 |grep SSID
 ```
 
 To add a wifi with wpa2 password use the following command
